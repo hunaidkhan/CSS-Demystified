@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demystified</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box">
+                <div class="hero-img">
+                    <div class="img"></div>
+                </div>
+                <div class="text">
+                    <h2>Lorem10 HUhsfuh</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam quos ipsum deserunt exercitationem natus praesentium accusantium aspernatur ipsa nisi molestiae, aperiam rem est fugiat libero consequatur hic perferendis. Eos.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="hero-img">
+                    <div class="img"></div>
+                </div>
+                <div class="text">
+                    <h2>Lorem10 HUhsfuh</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam quos ipsum deserunt exercitationem natus praesentium accusantium aspernatur ipsa nisi molestiae, aperiam rem est fugiat libero consequatur hic perferendis. Eos.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="hero-img">
+                    <div class="img"></div>
+                </div>
+                <div class="text">
+                    <h2>Lorem10 HUhsfuh</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam quos ipsum deserunt exercitationem natus praesentium accusantium aspernatur ipsa nisi molestiae, aperiam rem est fugiat libero consequatur hic perferendis. Eos.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="hero-img">
+                    <div class="img"></div>
+                </div>
+                <div class="text">
+                    <h2>Lorem10 HUhsfuh</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam quos ipsum deserunt exercitationem natus praesentium accusantium aspernatur ipsa nisi molestiae, aperiam rem est fugiat libero consequatur hic perferendis. Eos.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="hero-img">
+                    <div class="img"></div>
+                </div>
+                <div class="text">
+                    <h2>Lorem10 HUhsfuh</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veniam quos ipsum deserunt exercitationem natus praesentium accusantium aspernatur ipsa nisi molestiae, aperiam rem est fugiat libero consequatur hic perferendis. Eos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        const chatBoxes = Array.from(document.querySelectorAll(".box"));
+        chatBoxes.forEach(chat => chat.style.transform = "scale(0)")
+        setTimeout(() => {
+            chatBoxes[0].classList.add("animate-chat");
+            chatBoxes[0].style.transform = "scale(1)";
+            setTimeout(() => {
+                chatBoxes[1].classList.add("animate-chat");
+                chatBoxes[1].style.transform = "scale(1)";
+                setTimeout(() => {
+                    chatBoxes[2].classList.add("animate-chat");
+                    chatBoxes[2].style.transform = "scale(1)";
+                    setTimeout(() => {
+                        chatBoxes[3].classList.add("animate-chat");
+                        chatBoxes[3].style.transform = "scale(1)";
+                        setTimeout(() => {
+                            chatBoxes[4].classList.add("animate-chat");
+                            chatBoxes[4].style.transform = "scale(1)";
+                        }, 500);
+                    }, 500);
+                }, 500);
+            }, 500);
+        }, 500);
+    </script>
+</body>
+</html>
