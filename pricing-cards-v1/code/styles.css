@@ -31,6 +31,20 @@ h1 {
   margin: 0 0.5em;
 }
 
+.plan-white{
+  background: #FAFAFA;
+  color: #4E4E4E;
+}
+
+.plan-white .plan__price{
+  color: #00CDAC;
+}
+
+.plan-white .plan__button{
+  color: white;
+  background: #4E4E4E;
+}
+
 .plan__title {
   text-transform: uppercase;
   margin: 0 0 1em;
@@ -62,3 +76,4 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
 }
+

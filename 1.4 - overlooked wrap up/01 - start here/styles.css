@@ -1,0 +1,190 @@
+:root {
+  --clr-base-400: #5e5e5e;
+  --clr-base-500: #494949;
+
+  --clr-ui-300: #f8e2ff;
+  --clr-ui-400: #580d3a;
+  --clr-ux-300: #e2ffea;
+  --clr-ux-400: #115926;
+  --clr-dev-300: #e2fcff;
+  --clr-dev-400: #024f4f;
+
+  --clr-accent-400: #7e47c5;
+
+  --ff-accent: "Podkova", serif;
+  --ff-base: "Open Sans", sans-serif;
+
+  --fs-300: 0.75rem;
+  --fs-400: 1rem;
+  --fs-500: 2rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  --border-radius: 0.75rem;
+}
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+.candidate{
+  font-family: 'Open Sans Regular', sans-serif;
+  padding: 1rem;
+  line-height: 1.6;
+  transition: box-shadow 100ms ease-in;
+}
+
+.candidate img{
+  border-radius: var(--border-radius);
+}
+
+.candidate:hover{
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.name{
+  font-family: 'Podkova', sans-serif;
+  color: var(--clr-base-400);
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.roles{
+  margin-top: 0;
+}
+
+.tag{
+  padding: .3rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.tag + .tag{
+  margin-left: 1em;
+}
+
+.palette-green{
+  color: var(--clr-ux-400);
+  background-color: var(--clr-dev-300);
+}
+
+.palette-purple{
+  color: var(--clr-ui-400);
+  background-color: var(--clr-ui-300);
+}
+
+.bio{
+  margin-top: 0;
+  color: var(--clr-base-400);
+}
+
+.social{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn{
+  width: 40%;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  display: inline-block;
+  padding: .4rem;
+  justify-self: end;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  color: white;
+  background-color: var(--clr-accent-400);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /////////////////
+   Layout related
+   no need to touch any of this
+//////////////////*/
+
+.candidates {
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 2em;
+  display: grid;
+  gap: 2em;
+}
+
+.candidate {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-areas:
+    "img social"
+    "name name"
+    "role role"
+    "bio bio"
+    "button button";
+  gap: 0.5em;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+}
+
+@media (min-width: 500px) {
+  .candidate {
+    grid-template-columns: min-content minmax(15rem, 22.5rem);
+    grid-template-rows: min-content min-content 1fr auto;
+    grid-template-areas:
+      "img name"
+      "img role"
+      "img bio"
+      "social button";
+  }
+}
+
+@media (min-width: 960px) {
+  .candidates {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.candidate img {
+  grid-area: img;
+}
+.candidate .name {
+  grid-area: name;
+}
+.candidate .roles {
+  grid-area: role;
+}
+.candidate .bio {
+  grid-area: bio;
+}
+.candidate .social {
+  grid-area: social;
+}
+.candidate .btn {
+  grid-area: button;
+}
